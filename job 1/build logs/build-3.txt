@@ -1,0 +1,38 @@
+Started by user Rakesh Kumawat
+Running as SYSTEM
+Building remotely on slave1 in workspace /data/workspace/Job 1
+[Job 1] $ /bin/sh -xe /tmp/jenkins6690797659143020470.sh
++ sudo su -
+mesg: ttyname failed: Inappropriate ioctl for device
++ sudo apt-get install wget
+Reading package lists...
+Building dependency tree...
+Reading state information...
+wget is already the newest version (1.19.4-1ubuntu2.2).
+0 upgraded, 0 newly installed, 0 to remove and 20 not upgraded.
++ wget https://apt.puppet.com/puppet6-release-bionic.deb
+--2020-08-06 03:13:48--  https://apt.puppet.com/puppet6-release-bionic.deb
+Resolving apt.puppet.com (apt.puppet.com)... 99.86.230.30, 99.86.230.78, 99.86.230.124, ...
+Connecting to apt.puppet.com (apt.puppet.com)|99.86.230.30|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11736 (11K) [application/x-debian-package]
+Saving to: ‘puppet6-release-bionic.deb.2’
+
+     0K .......... .                                          100% 13.3M=0.001s
+
+2020-08-06 03:13:48 (13.3 MB/s) - ‘puppet6-release-bionic.deb.2’ saved [11736/11736]
+
++ sudo dpkg -i puppet6-release-bionic.deb
+(Reading database ... 85344 files and directories currently installed.)
+Preparing to unpack puppet6-release-bionic.deb ...
+Unpacking puppet6-release (6.0.0-8bionic) over (6.0.0-8bionic) ...
+Setting up puppet6-release (6.0.0-8bionic) ...
++ sudo apt-get install puppet -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+puppet is already the newest version (5.4.0-2ubuntu3).
+0 upgraded, 0 newly installed, 0 to remove and 20 not upgraded.
++ sudo rm -rf /etc/puppet/puppet.conf
++ sudo cat
+Finished: SUCCESS

@@ -1,0 +1,10 @@
+Started by user Rakesh Kumawat
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/Job 2
+[Job 2] $ /bin/sh -xe /tmp/jenkins3930880842234975634.sh
++ sudo /opt/puppetlabs/server/bin/puppetserver ca list
+Requested Certificates:
+    client       (SHA256)  61:9C:6E:AE:17:B2:C7:B3:28:DA:0B:53:9E:36:24:D3:C1:16:A1:2D:AD:E1:C9:6E:C7:F3:58:A5:1E:14:4C:9B
++ sudo /opt/puppetlabs/server/bin/puppetserver ca sign --certname client
+Successfully signed certificate request for client
+Finished: SUCCESS

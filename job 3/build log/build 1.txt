@@ -1,0 +1,37 @@
+Started by user Rakesh Kumawat
+Running as SYSTEM
+Building remotely on slave1 in workspace /data/workspace/job 3
+[job 3] $ /bin/sh -xe /tmp/jenkins599094385010102402.sh
++ sudo /opt/puppetlabs/bin/puppet agent --test
+[0;32mInfo: Using configured environment 'production'[0m
+[0;32mInfo: Retrieving pluginfacts[0m
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Retrieving locales[0m
+[0;32mInfo: Loading facts[0m
+[0;32mInfo: Caching catalog for client[0m
+[0;32mInfo: Applying configuration version '1596767311'[0m
+[mNotice: /Stage[main]/Apt/File[sources.list.d]/mode: mode changed '0644' to '0755'[0m
+[0;32mInfo: /Stage[main]/Apt/File[sources.list.d]: Scheduling refresh of Class[Apt::Update][0m
+[mNotice: /Stage[main]/Apt/File[preferences]/ensure: created[0m
+[0;32mInfo: /Stage[main]/Apt/File[preferences]: Scheduling refresh of Class[Apt::Update][0m
+[mNotice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/content: 
+--- /etc/apt/apt.conf.d/15update-stamp	2018-11-12 15:57:28.000000000 +0000
++++ /tmp/puppet-file20200807-55458-c5ksro	2020-08-07 02:28:36.885124588 +0000
+@@ -1 +1,2 @@
++// This file is managed by Puppet. DO NOT EDIT.
+ APT::Update::Post-Invoke-Success {"touch /var/lib/apt/periodic/update-success-stamp 2>/dev/null || true";};
+[0m
+[0;32mInfo: Computing checksum on file /etc/apt/apt.conf.d/15update-stamp[0m
+[0;32mInfo: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]: Filebucketed /etc/apt/apt.conf.d/15update-stamp to puppet with sum b9de0ac9e2c9854b1bb213e362dc4e41[0m
+[mNotice: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]/content: content changed '{md5}b9de0ac9e2c9854b1bb213e362dc4e41' to '{md5}0962d70c4ec78bbfa6f3544ae0c41974'[0m
+[0;32mInfo: /Stage[main]/Apt/Apt::Setting[conf-update-stamp]/File[/etc/apt/apt.conf.d/15update-stamp]: Scheduling refresh of Class[Apt::Update][0m
+[mNotice: /Stage[main]/Docker/Apt::Key[docker-ce]/Apt_key[docker-ce]/ensure: created[0m
+[mNotice: /Stage[main]/Docker/Apt::Source[docker-ce]/Apt::Setting[list-docker-ce]/File[/etc/apt/sources.list.d/docker-ce.list]/ensure: defined content as '{md5}92a9f186a65f95f128105b85e76b6b59'[0m
+[0;32mInfo: /Stage[main]/Docker/Apt::Source[docker-ce]/Apt::Setting[list-docker-ce]/File[/etc/apt/sources.list.d/docker-ce.list]: Scheduling refresh of Class[Apt::Update][0m
+[0;32mInfo: Class[Apt::Update]: Scheduling refresh of Exec[apt_update][0m
+[mNotice: /Stage[main]/Apt::Update/Exec[apt_update]: Triggered 'refresh' from 1 event[0m
+[mNotice: /Stage[main]/Docker/Exec[apt-get-update]/returns: executed successfully[0m
+[mNotice: /Stage[main]/Docker/Package[docker-ce]/ensure: created[0m
+[mNotice: Applied catalog in 58.71 seconds[0m
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
